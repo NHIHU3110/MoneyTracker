@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, -10, 839, 471))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MONEY_TRACK/ui/../images/Saving.png"))
+        self.label.setPixmap(QtGui.QPixmap("../images/Saving.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
