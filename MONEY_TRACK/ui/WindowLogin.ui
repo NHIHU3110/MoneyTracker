@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../images/image-Photoroom.png</normaloff>../images/image-Photoroom.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>851</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/Login.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Username:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditUserName">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>220</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #f0f0f0; /* Nền mặc định */
+    border: 2px solid #0066cc; /* Viền */
+    border-radius: 10px; /* Bo góc */
+    padding: 5px; /* Khoảng cách bên trong */
+    color: #333; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    transition: background 0.3s ease; /* Thêm hiệu ứng chuyển màu nền */
+}
+
+QLineEdit:hover {
+    background-color: #ffeb3b; /* Màu vàng nền khi hover */
+    border-color: #ffcc00; /* Màu viền khi hover */
+}
+
+QLineEdit:focus {
+    background-color: #ffeb3b; /* Màu vàng nền khi focus */
+    border-color: #ffcc00; /* Màu viền khi focus */
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>290</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditPassword">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>280</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #f0f0f0; /* Nền mặc định */
+    border: 2px solid #0066cc; /* Viền */
+    border-radius: 10px; /* Bo góc */
+    padding: 5px; /* Khoảng cách bên trong */
+    color: #333; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    transition: background 0.3s ease; /* Thêm hiệu ứng chuyển màu nền */
+}
+
+QLineEdit:hover {
+    background-color: #ffeb3b; /* Màu vàng nền khi hover */
+    border-color: #ffcc00; /* Màu viền khi hover */
+}
+
+QLineEdit:focus {
+    background-color: #ffeb3b; /* Màu vàng nền khi focus */
+    border-color: #ffcc00; /* Màu viền khi focus */
+}
+</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonLogin">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>340</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Tùy chỉnh cho QTabWidget */
+QTabWidget::pane {
+    border: none; /* Xóa viền của QTabWidget */
+    background-color: transparent; /* Nền trong suốt */
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #4e79b0, stop:1 #1e5fa1); /* Gradient nền của tab */
+    color: white; /* Màu chữ */
+    border: 2px solid #1e5fa1; /* Viền tab */
+    border-radius: 12px; /* Bo tròn góc của tab */
+    padding: 12px; /* Khoảng cách giữa văn bản và viền */
+    margin-right: 6px; /* Khoảng cách giữa các tab */
+    font-size: 14px; /* Kích thước font chữ */
+    font-weight: bold; /* Làm cho chữ đậm */
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1abc9c, stop:1 #16a085); /* Gradient nền của tab khi chọn */
+    border-color: #1abc9c; /* Viền của tab khi chọn */
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #16a085, stop:1 #1abc9c); /* Gradient nền của tab khi hover */
+}
+
+/* Tùy chỉnh cho các nút */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #3498db, stop:1 #2980b9); /* Gradient nền của nút */
+    color: white; /* Màu chữ */
+    border: 2px solid #2980b9; /* Viền của nút */
+    border-radius: 15px; /* Bo tròn góc của nút */
+    padding: 15px 30px; /* Khoảng cách giữa văn bản và viền */
+    font-size: 16px; /* Kích thước font chữ */
+    font-weight: bold; /* Làm cho chữ đậm */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1abc9c, stop:1 #16a085); /* Gradient nền của nút khi hover */
+    color: white; /* Màu chữ khi hover */
+    border-color: #16a085; /* Viền của nút khi hover */
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #16a085, stop:1 #1abc9c); /* Gradient nền của nút khi nhấn */
+    border-color: #1abc9c; /* Viền của nút khi nhấn */
+    color: white; /* Màu chữ khi nhấn */
+    transform: scale(0.98); /* Tạo hiệu ứng co lại khi nhấn */
+}
+
+/* Tùy chỉnh cho các tab khi không chọn */
+QTabBar::tab:!selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #34495e, stop:1 #2c3e50); /* Gradient nền cho tab chưa chọn */
+    border-color: #2c3e50; /* Viền cho tab chưa chọn */
+    color: #ecf0f1; /* Màu chữ cho tab chưa chọn */
+}
+
+/* Đảm bảo rằng tab có hiệu ứng khi hover */
+QTabBar::tab:hover:!selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1abc9c, stop:1 #16a085); /* Gradient nền khi hover vào tab chưa chọn */
+    border-color: #16a085;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRegister">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>340</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Tùy chỉnh cho QTabWidget */
+QTabWidget::pane {
+    border: none; /* Xóa viền của QTabWidget */
+    background-color: transparent; /* Nền trong suốt */
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #4e79b0, stop:1 #1e5fa1); /* Gradient nền của tab */
+    color: white; /* Màu chữ */
+    border: 2px solid #1e5fa1; /* Viền tab */
+    border-radius: 12px; /* Bo tròn góc của tab */
+    padding: 12px; /* Khoảng cách giữa văn bản và viền */
+    margin-right: 6px; /* Khoảng cách giữa các tab */
+    font-size: 14px; /* Kích thước font chữ */
+    font-weight: bold; /* Làm cho chữ đậm */
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1abc9c, stop:1 #16a085); /* Gradient nền của tab khi chọn */
+    border-color: #1abc9c; /* Viền của tab khi chọn */
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #16a085, stop:1 #1abc9c); /* Gradient nền của tab khi hover */
+}
+
+/* Tùy chỉnh cho các nút */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #3498db, stop:1 #2980b9); /* Gradient nền của nút */
+    color: white; /* Màu chữ */
+    border: 2px solid #2980b9; /* Viền của nút */
+    border-radius: 15px; /* Bo tròn góc của nút */
+    padding: 15px 30px; /* Khoảng cách giữa văn bản và viền */
+    font-size: 16px; /* Kích thước font chữ */
+    font-weight: bold; /* Làm cho chữ đậm */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1abc9c, stop:1 #16a085); /* Gradient nền của nút khi hover */
+    color: white; /* Màu chữ khi hover */
+    border-color: #16a085; /* Viền của nút khi hover */
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #16a085, stop:1 #1abc9c); /* Gradient nền của nút khi nhấn */
+    border-color: #1abc9c; /* Viền của nút khi nhấn */
+    color: white; /* Màu chữ khi nhấn */
+    transform: scale(0.98); /* Tạo hiệu ứng co lại khi nhấn */
+}
+
+/* Tùy chỉnh cho các tab khi không chọn */
+QTabBar::tab:!selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #34495e, stop:1 #2c3e50); /* Gradient nền cho tab chưa chọn */
+    border-color: #2c3e50; /* Viền cho tab chưa chọn */
+    color: #ecf0f1; /* Màu chữ cho tab chưa chọn */
+}
+
+/* Đảm bảo rằng tab có hiệu ứng khi hover */
+QTabBar::tab:hover:!selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1abc9c, stop:1 #16a085); /* Gradient nền khi hover vào tab chưa chọn */
+    border-color: #16a085;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Register</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>839</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
