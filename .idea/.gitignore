@@ -1,7 +1,0 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Bỏ qua thư mục PyCharm và môi trường ảo
-.idea/
-.venv/
-
