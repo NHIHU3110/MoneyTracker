@@ -1,5 +1,5 @@
-from MONEY_TRACK.libs.JsonFileFactory import JsonFileFactory
-from MONEY_TRACK.models.Transaction import Transaction
+from MoneyTracker.MONEY_TRACK.libs.JsonFileFactory import JsonFileFactory
+from MoneyTracker.MONEY_TRACK.models.Transaction import Transaction
 
 transactions=[]
 transactions.append(Transaction('T1','02/28/2025','500000','Money In', 'Salary'))
@@ -16,5 +16,5 @@ print('List of transactions: ')
 for tr in transactions:
     print(tr)
 jff=JsonFileFactory()
-filename='../dataset/transactions.json'
+filename= '../dataset/transactions.json'
 jff.write_data(transactions,filename)

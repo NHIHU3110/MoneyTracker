@@ -1,11 +1,11 @@
 # MONEY_TRACK/ui/WindowSpendingExt.py
 import logging
-from PyQt6.QtWidgets import QMessageBox, QMainWindow
+from PyQt6.QtWidgets import QMessageBox
 from PyQt6.QtCore import QDate
-from MONEY_TRACK.libs.DataConnector import DataConnector
-from MONEY_TRACK.models.MTuser_Transaction import MTuser_Transaction
-from MONEY_TRACK.models.Transaction import Transaction
-from MONEY_TRACK.ui.WindowSpending import Ui_MainWindow
+from MoneyTracker.MONEY_TRACK.libs.DataConnector import DataConnector
+from MoneyTracker.MONEY_TRACK.models.MTuser_Transaction import MTuser_Transaction
+from MoneyTracker.MONEY_TRACK.models.Transaction import Transaction
+from MoneyTracker.MONEY_TRACK.ui.WindowSpending import Ui_MainWindow
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -105,7 +105,6 @@ class WindowSpendingExt(Ui_MainWindow):
         new_transaction = Transaction(new_transaction_no, date, amount, category, category_detail)
         self.update_transactions(new_transaction)
         self.link_transaction_to_user(new_transaction_no)
-        self.main_ui.show_pie_chart_money_out()  # Update the pie chart for Money Out
         QMessageBox.information(self.MainWindow, "Success", "Transaction saved successfully!")
 
     def link_transaction_to_user(self, transaction_no):

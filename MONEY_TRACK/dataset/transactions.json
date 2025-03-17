@@ -7,21 +7,21 @@
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "4",
+        "TransactionNo": "1",
         "TransactionDate": "02/28/2025",
         "Amount": "25000",
         "Category": "Money Out",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "5",
+        "TransactionNo": "1",
         "TransactionDate": "02/28/2025",
         "Amount": "50000",
         "Category": "Money Out",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "6",
+        "TransactionNo": "1",
         "TransactionDate": "02/28/2025",
         "Amount": "40000",
         "Category": "Money Out",
@@ -35,14 +35,14 @@
         "CategoryDetail": "Moving"
     },
     {
-        "TransactionNo": "7",
+        "TransactionNo": "1",
         "TransactionDate": "03/16/2025",
         "Amount": 50000,
         "Category": "Money In",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "8",
+        "TransactionNo": "1",
         "TransactionDate": "1/1/2000",
         "Amount": 500000,
         "Category": "Money In",
@@ -63,11 +63,53 @@
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "4",
+        "TransactionNo": "2",
+        "TransactionDate": "12/04/2022",
+        "Amount": 1230000.0,
+        "Category": "Money In",
+        "CategoryDetail": ""
+    },
+    {
+        "TransactionNo": "3",
         "TransactionDate": "16/3/25",
         "Amount": 100000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
+    },
+    {
+        "TransactionNo": "2",
+        "TransactionDate": "17/3/25",
+        "Amount": 765465.0,
+        "Category": "Money In",
+        "CategoryDetail": "Allowance"
+    },
+    {
+        "TransactionNo": "2",
+        "TransactionDate": "17/3/25",
+        "Amount": 12355555.0,
+        "Category": "Money In",
+        "CategoryDetail": "Salary"
+    },
+    {
+        "TransactionNo": "2",
+        "TransactionDate": "17/3/25",
+        "Amount": 12344444.0,
+        "Category": "Money Out",
+        "CategoryDetail": "Shopping"
+    },
+    {
+        "TransactionNo": "2",
+        "TransactionDate": "17/3/25",
+        "Amount": 1243234556.0,
+        "Category": "Savings",
+        "CategoryDetail": "Savings"
+    },
+    {
+        "TransactionNo": "9",
+        "TransactionDate": "17/3/25",
+        "Amount": 1234567.0,
+        "Category": "Money In",
+        "CategoryDetail": "Salary"
     },
     {
         "TransactionNo": "1",
@@ -105,35 +147,35 @@
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "4",
+        "TransactionNo": "3",
         "TransactionDate": "3/16/2025",
         "Amount": 8000000.0,
         "Category": "Money In",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "5",
+        "TransactionNo": "3",
         "TransactionDate": "3/16/2025",
         "Amount": 200000.0,
         "Category": "Money In",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "6",
+        "TransactionNo": "3",
         "TransactionDate": "3/16/2025",
         "Amount": 600000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "7",
+        "TransactionNo": "3",
         "TransactionDate": "3/16/2025",
         "Amount": 500000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "8",
+        "TransactionNo": "4",
         "TransactionDate": "3/16/2025",
         "Amount": 100000.0,
         "Category": "Money Out",
@@ -168,7 +210,7 @@
         "CategoryDetail": "Moving"
     },
     {
-        "TransactionNo": "4",
+        "TransactionNo": "5",
         "TransactionDate": "3/16/2025",
         "Amount": 1000000.0,
         "Category": "Money In",
@@ -203,7 +245,7 @@
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "5",
+        "TransactionNo": "6",
         "TransactionDate": "3/16/2025",
         "Amount": 1500000.0,
         "Category": "Savings",

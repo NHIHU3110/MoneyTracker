@@ -1,5 +1,5 @@
-from MONEY_TRACK.libs.JsonFileFactory import JsonFileFactory
-from MONEY_TRACK.models.MTuser_Transaction import MTuser_Transaction
+from MoneyTracker.MONEY_TRACK.libs.JsonFileFactory import JsonFileFactory
+from MoneyTracker.MONEY_TRACK.models.MTuser_Transaction import MTuser_Transaction
 
 mtuts=[]
 mtuts.append(MTuser_Transaction('Tran Khanh Ly','T1','Money Out'))
@@ -14,5 +14,5 @@ for mtut in mtuts:
     print(mtut)
 
 jff=JsonFileFactory()
-filename='../dataset/mtuser_transactions.json'
+filename= '../dataset/mtuser_transactions.json'
 jff.write_data(mtuts,filename)

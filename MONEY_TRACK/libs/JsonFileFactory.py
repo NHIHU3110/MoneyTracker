@@ -1,7 +1,8 @@
 # python
 import json
 import os
-from MONEY_TRACK.models import Transaction
+from MoneyTracker.MONEY_TRACK.models import Transaction
+
 
 class JsonFileFactory:
     def write_data(self, arr_data, filename):

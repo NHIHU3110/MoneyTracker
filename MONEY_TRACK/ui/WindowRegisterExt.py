@@ -2,8 +2,8 @@ import json
 import os
 import traceback
 from PyQt6.QtWidgets import QMessageBox, QMainWindow
-from MONEY_TRACK.models.MTuser import MTuser
-from MONEY_TRACK.ui.WindowRegister import Ui_MainWindow
+from MoneyTracker.MONEY_TRACK.models.MTuser import MTuser
+from MoneyTracker.MONEY_TRACK.ui.WindowRegister import Ui_MainWindow
 
 class WindowRegisterExt(Ui_MainWindow):
     def setupUi(self, MainWindow):
@@ -21,7 +21,7 @@ class WindowRegisterExt(Ui_MainWindow):
 
     def process_back(self):
         """Quay lại màn hình đăng nhập"""
-        from MONEY_TRACK.ui.WindowLoginExt import WindowLoginExt  # Import muộn
+        from MoneyTracker.MONEY_TRACK.ui.WindowLoginExt import WindowLoginExt  # Import muộn
         self.MainWindow.close()
         self.window_login = QMainWindow()
         self.login_ui = WindowLoginExt()

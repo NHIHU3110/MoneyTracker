@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
 
-from MONEY_TRACK.ui.MainWindowExt import MainWindowExt
+from MoneyTracker.MONEY_TRACK.ui.MainWindowExt import MainWindowExt
 
 app=QApplication([])
 mainwindow=QMainWindow()

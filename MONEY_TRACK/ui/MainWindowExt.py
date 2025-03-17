@@ -3,14 +3,14 @@ import io
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem, QMainWindow, QTableWidget, QVBoxLayout, QWidget, QAbstractItemView
+from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem, QMainWindow, QAbstractItemView
 from matplotlib import pyplot as plt
 
-from MONEY_TRACK.libs.DataConnector import DataConnector
+from MoneyTracker.MONEY_TRACK.libs.DataConnector import DataConnector
 import logging
 
-from MONEY_TRACK.models.Transaction import Transaction
-from MONEY_TRACK.ui.MainWindow import Ui_MainWindow
+from MoneyTracker.MONEY_TRACK.models.Transaction import Transaction
+from MoneyTracker.MONEY_TRACK.ui.MainWindow import Ui_MainWindow
 
 # Setup basic logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -99,10 +99,21 @@ class MainWindowExt(Ui_MainWindow):
         self.pushButtonSpending.clicked.connect(self.open_spending_window)
         self.pushButtonSavings.clicked.connect(self.open_savings_window)
 
-    def show_pie_chart(self):
+    def show_pie_chart(self, name):
         try:
-            transactions = self.data_connector.get_all_transactions()
+            transactions = self.data_connector.get_transactions_by_name(name)
+
+            if not transactions:
+                logging.error(f"No transactions found for user '{name}'.")
+                self.labelMoneyIn.clear()
+                return
+
             money_in_transactions = [tr for tr in transactions if tr.Category == "Money In"]
+
+            if not money_in_transactions:
+                logging.warning(f"No 'Money In' transactions found for user '{name}'.")
+                self.labelMoneyIn.clear()
+                return
 
             category_details = {}
             for tr in money_in_transactions:
@@ -111,28 +122,45 @@ class MainWindowExt(Ui_MainWindow):
                 else:
                     category_details[tr.CategoryDetail] = float(tr.Amount)
 
+            if not category_details:
+                logging.warning(f"No valid data to generate chart for user '{name}'.")
+                self.labelMoneyIn.clear()
+                return
+
+
+            print(f"\nUser: {name}")
+            print("Category Details (Amount per Category):")
+            for category, amount in category_details.items():
+                print(f"  - {category}: {amount}")
+            print("Generating chart...")
+
             labels = category_details.keys()
             sizes = category_details.values()
 
             fig, ax = plt.subplots()
             ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, textprops={'fontsize': 8})
-            ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+            ax.axis('equal')
 
-            # Resize the figure to fit the label
             width, height = self.labelMoneyIn.width(), self.labelMoneyIn.height()
             fig.set_size_inches(width / fig.dpi, height / fig.dpi)
 
             buf = io.BytesIO()
-            plt.savefig(buf, format='png')
+            plt.savefig(buf, format='png', bbox_inches='tight', transparent=True)
             buf.seek(0)
+
             pixmap = QPixmap()
-            pixmap.loadFromData(buf.getvalue())
+            if not pixmap.loadFromData(buf.getvalue()):
+                logging.error("Failed to load pie chart image into QPixmap.")
+                return
+
             self.labelMoneyIn.setPixmap(pixmap)
+            self.labelMoneyIn.repaint()
+
             buf.close()
+            plt.close(fig)
+
         except Exception as e:
             logging.error(f"Error generating pie chart: {e}")
-
-
 
     def showWindow(self, username, password):
         user = self.data_connector.login(username, password)
@@ -141,7 +169,7 @@ class MainWindowExt(Ui_MainWindow):
             self.load_transactions_for_user()
             self.update_totals()
             self.lineEditWelcome.setText(f"Hello, {self.user_name}")
-            self.show_pie_chart()  # Call the pie chart method here
+            self.show_pie_chart(self.user_name)
             self.MainWindow.show()
         else:
             QMessageBox.warning(
@@ -180,7 +208,7 @@ class MainWindowExt(Ui_MainWindow):
             logging.error(f"Failed to update totals: {e}")
 
     def process_logout(self):
-        from MONEY_TRACK.ui.WindowLoginExt import WindowLoginExt
+        from MoneyTracker.MONEY_TRACK.ui.WindowLoginExt import WindowLoginExt
         confirmation = QMessageBox.question(
             self.MainWindow,
             "Confirm Logout",
@@ -303,21 +331,21 @@ class MainWindowExt(Ui_MainWindow):
         self.load_transactions_for_user(category_filter=category)
 
     def open_savings_window(self):
-        from MONEY_TRACK.ui.WindowSavingExt import WindowSavingExt
+        from MoneyTracker.MONEY_TRACK.ui.WindowSavingExt import WindowSavingExt
         self.savings_window = QMainWindow()
         self.savings_ui = WindowSavingExt()
         self.savings_ui.setupUi(self.savings_window, self)
         self.savings_ui.showWindow()
 
     def open_earnings_window(self):
-        from MONEY_TRACK.ui.WindowEarningExt import WindowEarningExt
+        from MoneyTracker.MONEY_TRACK.ui.WindowEarningExt import WindowEarningExt
         self.earnings_window = QMainWindow()
         self.earnings_ui = WindowEarningExt()
         self.earnings_ui.setupUi(self.earnings_window, self)
         self.earnings_ui.showWindow()
 
     def open_spending_window(self):
-        from MONEY_TRACK.ui.WindowSpendingExt import WindowSpendingExt
+        from MoneyTracker.MONEY_TRACK.ui.WindowSpendingExt import WindowSpendingExt
         self.spending_window = QMainWindow()
         self.spending_ui = WindowSpendingExt()
         self.spending_ui.setupUi(self.spending_window, self)

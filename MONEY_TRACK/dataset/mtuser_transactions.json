@@ -258,5 +258,30 @@
         "Name": "Huynh Thao Nhi",
         "TransactionID": "4",
         "Category": "Allowance"
+    },
+    {
+        "Name": "Huynh Thao Nhi",
+        "TransactionID": "5",
+        "Category": "Allowance"
+    },
+    {
+        "Name": "Huynh Thao Nhi",
+        "TransactionID": "6",
+        "Category": "Salary"
+    },
+    {
+        "Name": "Huynh Thao Nhi",
+        "TransactionID": "7",
+        "Category": "Shopping"
+    },
+    {
+        "Name": "Huynh Thao Nhi",
+        "TransactionID": "8",
+        "Category": "Savings"
+    },
+    {
+        "Name": "Huynh Thao Nhi",
+        "TransactionID": "9",
+        "Category": "Salary"
     }
 ]

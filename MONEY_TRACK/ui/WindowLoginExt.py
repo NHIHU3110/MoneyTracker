@@ -1,8 +1,8 @@
 import traceback
 from PyQt6.QtWidgets import QMainWindow, QMessageBox
-from MONEY_TRACK.libs.DataConnector import DataConnector
-from MONEY_TRACK.ui.MainWindowExt import MainWindowExt
-from MONEY_TRACK.ui.WindowLogin import Ui_MainWindow
+from MoneyTracker.MONEY_TRACK.libs.DataConnector import DataConnector
+from MoneyTracker.MONEY_TRACK.ui.MainWindowExt import MainWindowExt
+from MoneyTracker.MONEY_TRACK.ui.WindowLogin import Ui_MainWindow
 
 class WindowLoginExt(Ui_MainWindow):
    def setupUi(self, MainWindow):
@@ -45,7 +45,7 @@ class WindowLoginExt(Ui_MainWindow):
            QMessageBox.critical(self.MainWindow, "ERROR", f"Đã xảy ra lỗi trong quá trình đăng nhập: {str(e)}")
 
    def process_register(self):
-       from MONEY_TRACK.ui.WindowRegisterExt import WindowRegisterExt  # Import muộn
+       from MoneyTracker.MONEY_TRACK.ui.WindowRegisterExt import WindowRegisterExt  # Import muộn
        self.MainWindow.close()
        self.window_register = QMainWindow()
        self.register_ui = WindowRegisterExt()
