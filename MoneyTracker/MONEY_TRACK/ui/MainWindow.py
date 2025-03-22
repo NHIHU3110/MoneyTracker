@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MONEY_TRACK/ui/MainWindow.ui'
+# Form implementation generated from reading ui file '/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MoneyTracker/MONEY_TRACK/ui/MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -12,9 +12,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(833, 525)
+        MainWindow.resize(833, 497)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../images/others - Chi1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MoneyTracker/MONEY_TRACK/ui/../images/others - Chi1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.label.setFont(font)
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../images/MainWindow.png"))
+        self.label.setPixmap(QtGui.QPixmap("/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MoneyTracker/MONEY_TRACK/ui/../images/MainWindow.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.tabWidget = QtWidgets.QTabWidget(parent=self.centralwidget)
@@ -481,7 +481,7 @@ class Ui_MainWindow(object):
 "")
         self.pushButton.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../images/Earnings1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MoneyTracker/MONEY_TRACK/ui/../images/Earnings1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton.setIcon(icon1)
         self.pushButton.setIconSize(QtCore.QSize(150, 150))
         self.pushButton.setObjectName("pushButton")
@@ -500,7 +500,7 @@ class Ui_MainWindow(object):
 "")
         self.pushButton_2.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../images/spending1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MoneyTracker/MONEY_TRACK/ui/../images/spending1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_2.setIcon(icon2)
         self.pushButton_2.setIconSize(QtCore.QSize(140, 140))
         self.pushButton_2.setObjectName("pushButton_2")
@@ -519,7 +519,7 @@ class Ui_MainWindow(object):
 "")
         self.pushButton_3.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../images/savings1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("/Users/huynhthaonhi/PycharmProjects/MoneyTracker/MoneyTracker/MONEY_TRACK/ui/../images/savings1.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_3.setIcon(icon3)
         self.pushButton_3.setIconSize(QtCore.QSize(130, 130))
         self.pushButton_3.setObjectName("pushButton_3")
@@ -527,16 +527,18 @@ class Ui_MainWindow(object):
         self.tabManagement = QtWidgets.QWidget()
         self.tabManagement.setObjectName("tabManagement")
         self.labelMoneyIn = QtWidgets.QLabel(parent=self.tabManagement)
-        self.labelMoneyIn.setGeometry(QtCore.QRect(60, 30, 231, 211))
+        self.labelMoneyIn.setGeometry(QtCore.QRect(10, 20, 331, 211))
         font = QtGui.QFont()
         font.setFamily("Arial")
         self.labelMoneyIn.setFont(font)
+        self.labelMoneyIn.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelMoneyIn.setObjectName("labelMoneyIn")
         self.labelMoneyOut = QtWidgets.QLabel(parent=self.tabManagement)
-        self.labelMoneyOut.setGeometry(QtCore.QRect(380, 30, 241, 211))
+        self.labelMoneyOut.setGeometry(QtCore.QRect(340, 30, 331, 211))
         font = QtGui.QFont()
         font.setFamily("Arial")
         self.labelMoneyOut.setFont(font)
+        self.labelMoneyOut.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelMoneyOut.setObjectName("labelMoneyOut")
         self.label_4 = QtWidgets.QLabel(parent=self.tabManagement)
         self.label_4.setGeometry(QtCore.QRect(90, 230, 141, 101))
@@ -1206,7 +1208,7 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.tabSetting, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 833, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 833, 36))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1214,7 +1216,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1229,8 +1231,8 @@ class Ui_MainWindow(object):
         self.pushButtonEarnings.setText(_translate("MainWindow", "Earnings"))
         self.pushButtonSavings.setText(_translate("MainWindow", "Savings"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabNewTransaction), _translate("MainWindow", "New Transaction"))
-        self.labelMoneyIn.setText(_translate("MainWindow", "Pie chart 1"))
-        self.labelMoneyOut.setText(_translate("MainWindow", "Pie chart 2"))
+        self.labelMoneyIn.setText(_translate("MainWindow", "There is no data"))
+        self.labelMoneyOut.setText(_translate("MainWindow", "There is no data"))
         self.label_4.setText(_translate("MainWindow", "MONEY IN"))
         self.label_5.setText(_translate("MainWindow", "MONEY OUT"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabManagement), _translate("MainWindow", "Management"))

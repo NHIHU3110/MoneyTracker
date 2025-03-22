@@ -105,62 +105,99 @@ class MainWindowExt(Ui_MainWindow):
 
             if not transactions:
                 logging.error(f"No transactions found for user '{name}'.")
-                self.labelMoneyIn.clear()
+                self.labelMoneyIn.clear()  # Có thể thay labelMoneyIn nếu muốn hiển thị ở một label khác
                 return
 
+            # Xử lý cho Money In
             money_in_transactions = [tr for tr in transactions if tr.Category == "Money In"]
 
             if not money_in_transactions:
                 logging.warning(f"No 'Money In' transactions found for user '{name}'.")
-                self.labelMoneyIn.clear()
-                return
+                self.labelMoneyIn.clear()  # Dùng labelMoneyIn cho cả 2 loại
+            else:
+                category_details_in = {}
+                for tr in money_in_transactions:
+                    if tr.CategoryDetail in category_details_in:
+                        category_details_in[tr.CategoryDetail] += float(tr.Amount)
+                    else:
+                        category_details_in[tr.CategoryDetail] = float(tr.Amount)
 
-            category_details = {}
-            for tr in money_in_transactions:
-                if tr.CategoryDetail in category_details:
-                    category_details[tr.CategoryDetail] += float(tr.Amount)
-                else:
-                    category_details[tr.CategoryDetail] = float(tr.Amount)
+                if category_details_in:
+                    labels_in = list(category_details_in.keys())
+                    sizes_in = list(category_details_in.values())
 
-            if not category_details:
-                logging.warning(f"No valid data to generate chart for user '{name}'.")
-                self.labelMoneyIn.clear()
-                return
+                    # Define custom colors
+                    colors_in = ['#4e73df', '#f5b9c9', '#f1c40f', '#9b59b6', '#1f77b4']  # Add more colors if needed
 
+                    fig, ax = plt.subplots(figsize=(3, 3))  # Adjust the size of the pie chart here (smaller size)
+                    ax.pie(sizes_in, labels=labels_in, startangle=30, colors=colors_in, textprops={'fontsize': 4})
+                    ax.axis('equal')  # Đảm bảo biểu đồ tròn
 
-            print(f"\nUser: {name}")
-            print("Category Details (Amount per Category):")
-            for category, amount in category_details.items():
-                print(f"  - {category}: {amount}")
-            print("Generating chart...")
+                    # Add legend for each segment, placed to the right of the chart
+                    ax.legend(labels_in, title="Categories", loc="center left", bbox_to_anchor=(1, 0.5))
 
-            labels = category_details.keys()
-            sizes = category_details.values()
+                    # Adjust layout to fit everything into the view
+                    fig.tight_layout(pad=1.0)  # Ensure tight layout to avoid overflow
 
-            fig, ax = plt.subplots()
-            ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, textprops={'fontsize': 8})
-            ax.axis('equal')
+                    # Resize to fit the label area
+                    width, height = self.labelMoneyIn.width(), self.labelMoneyIn.height()
+                    fig.set_size_inches(width / fig.dpi, height / fig.dpi)
 
-            width, height = self.labelMoneyIn.width(), self.labelMoneyIn.height()
-            fig.set_size_inches(width / fig.dpi, height / fig.dpi)
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png')
+                    buf.seek(0)
+                    pixmap = QPixmap()
+                    pixmap.loadFromData(buf.getvalue())
+                    self.labelMoneyIn.setPixmap(pixmap)
+                    buf.close()
 
-            buf = io.BytesIO()
-            plt.savefig(buf, format='png', bbox_inches='tight', transparent=True)
-            buf.seek(0)
+            # Xử lý cho Money Out
+            money_out_transactions = [tr for tr in transactions if tr.Category == "Money Out"]
 
-            pixmap = QPixmap()
-            if not pixmap.loadFromData(buf.getvalue()):
-                logging.error("Failed to load pie chart image into QPixmap.")
-                return
+            if not money_out_transactions:
+                logging.warning(f"No 'Money Out' transactions found for user '{name}'.")
+                self.labelMoneyOut.clear()  # Dùng labelMoneyOut cho Money Out
+            else:
+                category_details_out = {}
+                for tr in money_out_transactions:
+                    if tr.CategoryDetail in category_details_out:
+                        category_details_out[tr.CategoryDetail] += float(tr.Amount)
+                    else:
+                        category_details_out[tr.CategoryDetail] = float(tr.Amount)
 
-            self.labelMoneyIn.setPixmap(pixmap)
-            self.labelMoneyIn.repaint()
+                if category_details_out:
+                    labels_out = list(category_details_out.keys())
+                    sizes_out = list(category_details_out.values())
 
-            buf.close()
-            plt.close(fig)
+                    # Define custom colors for Money Out
+                    colors_out = ['#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b']  # Add more colors if needed
+
+                    fig, ax = plt.subplots(figsize=(3, 3))  # Adjust the size of the pie chart here (smaller size)
+                    ax.pie(sizes_out, labels=labels_out, startangle=30, colors=colors_out, textprops={'fontsize': 4})
+                    ax.axis('equal')  # Đảm bảo biểu đồ tròn
+
+                    # Add legend for each segment, placed to the right of the chart
+                    ax.legend(labels_out, title="Categories", loc="center left", bbox_to_anchor=(1, 0.5))
+
+                    # Adjust layout to fit everything into the view
+                    fig.tight_layout(pad=1.0)  # Ensure tight layout to avoid overflow
+
+                    # Resize to fit the label area
+                    width, height = self.labelMoneyOut.width(), self.labelMoneyOut.height()
+                    fig.set_size_inches(width / fig.dpi, height / fig.dpi)
+
+                    buf = io.BytesIO()
+                    plt.savefig(buf, format='png')
+                    buf.seek(0)
+                    pixmap = QPixmap()
+                    pixmap.loadFromData(buf.getvalue())
+                    self.labelMoneyOut.setPixmap(pixmap)
+                    buf.close()
 
         except Exception as e:
             logging.error(f"Error generating pie chart: {e}")
+
+
 
     def showWindow(self, username, password):
         user = self.data_connector.login(username, password)
@@ -321,7 +358,6 @@ class MainWindowExt(Ui_MainWindow):
             if not found:
                 new_transaction = Transaction(new_no, new_date, new_amount, new_category, "")
                 transactions.append(new_transaction)
-
             self.data_connector.update_transactions(transactions)
             self.load_transactions_for_user()  # Reload to reflect changes
             QMessageBox.information(self.MainWindow, "Info", "Transaction saved successfully.")

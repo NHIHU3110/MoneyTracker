@@ -1,48 +1,41 @@
 [
     {
-        "TransactionNo": "3",
+        "TransactionNo": "1",
         "TransactionDate": "02/28/2025",
         "Amount": "15000",
         "Category": "Money In",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "1",
+        "TransactionNo": "2",
         "TransactionDate": "02/28/2025",
         "Amount": "25000",
         "Category": "Money Out",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "1",
+        "TransactionNo": "3",
         "TransactionDate": "02/28/2025",
         "Amount": "50000",
         "Category": "Money Out",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "1",
+        "TransactionNo": "4",
         "TransactionDate": "02/28/2025",
         "Amount": "40000",
         "Category": "Money Out",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "5",
         "TransactionDate": "02/28/2025",
         "Amount": 200000.0,
         "Category": "Money Out",
         "CategoryDetail": "Moving"
     },
     {
-        "TransactionNo": "1",
-        "TransactionDate": "03/16/2025",
-        "Amount": 50000,
-        "Category": "Money In",
-        "CategoryDetail": "Others"
-    },
-    {
-        "TransactionNo": "1",
+        "TransactionNo": "6",
         "TransactionDate": "1/1/2000",
         "Amount": 500000,
         "Category": "Money In",
@@ -63,42 +56,35 @@
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "2",
-        "TransactionDate": "12/04/2022",
-        "Amount": 1230000.0,
-        "Category": "Money In",
-        "CategoryDetail": ""
-    },
-    {
-        "TransactionNo": "3",
+        "TransactionNo": "7",
         "TransactionDate": "16/3/25",
         "Amount": 100000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "8",
         "TransactionDate": "17/3/25",
         "Amount": 765465.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "8",
         "TransactionDate": "17/3/25",
         "Amount": 12355555.0,
         "Category": "Money In",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "9",
         "TransactionDate": "17/3/25",
         "Amount": 12344444.0,
         "Category": "Money Out",
         "CategoryDetail": "Shopping"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "10",
         "TransactionDate": "17/3/25",
         "Amount": 1243234556.0,
         "Category": "Savings",
@@ -112,70 +98,133 @@
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "1",
+        "TransactionNo": "43",
+        "TransactionDate": "17/3/25",
+        "Amount": 10000000.0,
+        "Category": "Money In",
+        "CategoryDetail": "Salary"
+    },
+    {
+        "TransactionNo": "8",
+        "TransactionDate": "17/3/25",
+        "Amount": 7000000.0,
+        "Category": "Money In",
+        "CategoryDetail": "Allowance"
+    },
+    {
+        "TransactionNo": "9",
+        "TransactionDate": "17/3/25",
+        "Amount": 378000.0,
+        "Category": "Money Out",
+        "CategoryDetail": "Shopping"
+    },
+    {
+        "TransactionNo": "8",
+        "TransactionDate": "17/3/25",
+        "Amount": 200000.0,
+        "Category": "Money Out",
+        "CategoryDetail": "FoodDrink"
+    },
+    {
+        "TransactionNo": "11",
+        "TransactionDate": "17/3/25",
+        "Amount": 10000.0,
+        "Category": "Money Out",
+        "CategoryDetail": "Moving"
+    },
+    {
+        "TransactionNo": "9",
+        "TransactionDate": "17/3/25",
+        "Amount": 5000000.0,
+        "Category": "Money In",
+        "CategoryDetail": "Allowance"
+    },
+    {
+        "TransactionNo": "8",
+        "TransactionDate": "17/3/25",
+        "Amount": 10000.0,
+        "Category": "Money In",
+        "CategoryDetail": "Salary"
+    },
+    {
+        "TransactionNo": "12",
+        "TransactionDate": "17/3/25",
+        "Amount": 10000000.0,
+        "Category": "Money In",
+        "CategoryDetail": "Salary"
+    },
+    {
+        "TransactionNo": "8",
+        "TransactionDate": "17/3/25",
+        "Amount": 5000000.0,
+        "Category": "Money In",
+        "CategoryDetail": "Others"
+    },
+    {
+        "TransactionNo": "9",
         "TransactionDate": "2/16/2025",
         "Amount": 150000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "10",
         "TransactionDate": "3/10/2025",
         "Amount": 500000.0,
         "Category": "Money Out",
         "CategoryDetail": "Shopping"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "11",
         "TransactionDate": "3/13/2025",
         "Amount": 2000000.0,
         "Category": "Savings",
         "CategoryDetail": ""
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "9",
         "TransactionDate": "3/16/2025",
         "Amount": 10000.0,
         "Category": "Money Out",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "10",
         "TransactionDate": "3/16/2025",
         "Amount": 1000000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "11",
         "TransactionDate": "3/16/2025",
         "Amount": 8000000.0,
         "Category": "Money In",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "12",
         "TransactionDate": "3/16/2025",
         "Amount": 200000.0,
         "Category": "Money In",
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "13",
         "TransactionDate": "3/16/2025",
         "Amount": 600000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "14",
         "TransactionDate": "3/16/2025",
         "Amount": 500000.0,
         "Category": "Money In",
         "CategoryDetail": "Allowance"
     },
     {
-        "TransactionNo": "4",
+        "TransactionNo": "8",
         "TransactionDate": "3/16/2025",
         "Amount": 100000.0,
         "Category": "Money Out",
@@ -196,35 +245,35 @@
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "12",
         "TransactionDate": "3/16/2025",
         "Amount": 1000000.0,
         "Category": "Money In",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "3",
+        "TransactionNo": "15",
         "TransactionDate": "3/16/2025",
         "Amount": 10000.0,
         "Category": "Money Out",
         "CategoryDetail": "Moving"
     },
     {
-        "TransactionNo": "5",
+        "TransactionNo": "10",
         "TransactionDate": "3/16/2025",
         "Amount": 1000000.0,
         "Category": "Money In",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "1",
+        "TransactionNo": "13",
         "TransactionDate": "3/16/2025",
         "Amount": 1000000.0,
         "Category": "Money In",
         "CategoryDetail": "Salary"
     },
     {
-        "TransactionNo": "2",
+        "TransactionNo": "13",
         "TransactionDate": "3/16/2025",
         "Amount": 10000000.0,
         "Category": "Money In",
@@ -245,14 +294,14 @@
         "CategoryDetail": "Others"
     },
     {
-        "TransactionNo": "6",
+        "TransactionNo": "10",
         "TransactionDate": "3/16/2025",
         "Amount": 1500000.0,
         "Category": "Savings",
         "CategoryDetail": "Savings"
     },
     {
-        "TransactionNo": "42",
+        "TransactionNo": "8",
         "TransactionDate": "3/16/2025",
         "Amount": 1000000.0,
         "Category": "Money Out",

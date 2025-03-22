@@ -283,5 +283,50 @@
         "Name": "Huynh Thao Nhi",
         "TransactionID": "9",
         "Category": "Salary"
+    },
+    {
+        "Name": "Tran Khanh Ly",
+        "TransactionID": "43",
+        "Category": "Salary"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "1",
+        "Category": "Allowance"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "2",
+        "Category": "Shopping"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "3",
+        "Category": "FoodDrink"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "4",
+        "Category": "Moving"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "5",
+        "Category": "Allowance"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "6",
+        "Category": "Salary"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "7",
+        "Category": "Salary"
+    },
+    {
+        "Name": "Nhi Huỳnh",
+        "TransactionID": "8",
+        "Category": "Others"
     }
 ]

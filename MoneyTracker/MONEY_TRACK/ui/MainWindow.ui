@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>833</width>
-    <height>525</height>
+    <height>497</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -105,7 +105,7 @@ QTabWidget {
 </string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideLeft</enum>
@@ -761,9 +761,9 @@ QTabBar::tab:hover:!selected {
      <widget class="QLabel" name="labelMoneyIn">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>30</y>
-        <width>231</width>
+        <x>10</x>
+        <y>20</y>
+        <width>331</width>
         <height>211</height>
        </rect>
       </property>
@@ -773,15 +773,18 @@ QTabBar::tab:hover:!selected {
        </font>
       </property>
       <property name="text">
-       <string>Pie chart 1</string>
+       <string>There is no data</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="labelMoneyOut">
       <property name="geometry">
        <rect>
-        <x>380</x>
+        <x>340</x>
         <y>30</y>
-        <width>241</width>
+        <width>331</width>
         <height>211</height>
        </rect>
       </property>
@@ -791,7 +794,10 @@ QTabBar::tab:hover:!selected {
        </font>
       </property>
       <property name="text">
-       <string>Pie chart 2</string>
+       <string>There is no data</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
@@ -1801,7 +1807,7 @@ QTabBar::tab:hover:!selected {
      <x>0</x>
      <y>0</y>
      <width>833</width>
-     <height>18</height>
+     <height>36</height>
     </rect>
    </property>
   </widget>
