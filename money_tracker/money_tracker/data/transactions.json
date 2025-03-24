@@ -1,0 +1,163 @@
+[
+  {
+    "transaction_number": "fb24b0af-52a2-4e51-9ada-53bf6a059cae",
+    "transaction_date": "2025-03-18",
+    "amount": 100000.0,
+    "category": "Money In",
+    "category_detail": "Salary"
+  },
+  {
+    "transaction_number": "28aa72e7-3b43-4d17-bf47-c15aa5b79d2f",
+    "transaction_date": "2025-03-18",
+    "amount": 560000.0,
+    "category": "Money In",
+    "category_detail": "Allowance"
+  },
+  {
+    "transaction_number": "7ee87cc0-a184-4e0c-9017-2c106ebe5f9e",
+    "transaction_date": "2025-03-18",
+    "amount": 80000.0,
+    "category": "Money Out",
+    "category_detail": "Moving"
+  },
+  {
+    "transaction_number": "54088004-ae1a-45dd-936c-0adca60adc83",
+    "transaction_date": "2025-03-20",
+    "amount": 100000.0,
+    "category": "Money In",
+    "category_detail": "Allowance"
+  },
+  {
+    "transaction_number": "f71c40c9-8bcd-40a1-b576-a55000a0af00",
+    "transaction_date": "2025-01-15",
+    "amount": 120000.0,
+    "category": "Money In",
+    "category_detail": "Allowance"
+  },
+  {
+    "transaction_number": "4cee010f-30f0-4ce3-aa0f-7981206557f7",
+    "transaction_date": "2025-03-21",
+    "amount": 120000.0,
+    "category": "Money In",
+    "category_detail": "Allowance"
+  },
+  {
+    "transaction_number": "8e4239ed-f354-4069-b5e1-db4ec0ced2cb",
+    "transaction_date": "2025-03-21",
+    "amount": 89000.0,
+    "category": "Money In",
+    "category_detail": "Salary"
+  },
+  {
+    "transaction_number": "60101214-d06c-4a55-83cc-358fc1bc2280",
+    "transaction_date": "2025-03-21",
+    "amount": 100000.0,
+    "category": "Money In",
+    "category_detail": "Salary"
+  },
+  {
+    "transaction_number": "7305aaf6-16ae-4292-83b6-be5bffee4585",
+    "transaction_date": "2025-03-21",
+    "amount": 100000.0,
+    "category": "Money Out",
+    "category_detail": "Shopping"
+  },
+  {
+    "transaction_number": "2f3cad0f-3de4-425e-9184-2b27eee52d23",
+    "transaction_date": "2025-03-21",
+    "amount": 19000.0,
+    "category": "Money Out",
+    "category_detail": "Shopping"
+  },
+  {
+    "transaction_number": "58667178-e552-44f9-8e3b-2913c11806b8",
+    "transaction_date": "2025-03-21",
+    "amount": 100000.0,
+    "category": "Savings",
+    "category_detail": "General Savings"
+  },
+  {
+    "transaction_number": "5cd8f7bc-c1de-418e-8626-e476a6caed47",
+    "transaction_date": "2025-03-21",
+    "amount": 200000.0,
+    "category": "Money In",
+    "category_detail": "Salary"
+  },
+  {
+    "transaction_number": "2a1dd686-dbee-4325-ac0c-c34df4bfe701",
+    "transaction_date": "2025-03-21",
+    "amount": 800000.0,
+    "category": "Money Out",
+    "category_detail": "Invoice"
+  },
+  {
+    "transaction_number": "776b815b-f1e5-45c0-9130-c2e4a243e3ea",
+    "transaction_date": "2025-03-22",
+    "amount": 9999999.0,
+    "category": "Money In",
+    "category_detail": "Salary"
+  },
+  {
+    "transaction_number": "f0d45e09-c7a4-4907-bdc7-0375eea4b9f4",
+    "transaction_date": "2025-03-22",
+    "amount": 191991.0,
+    "category": "Money In",
+    "category_detail": "Others"
+  },
+  {
+    "transaction_number": "a04901f8-26d8-4ced-b60c-9ec84ac956fc",
+    "transaction_date": "2025-03-22",
+    "amount": 1000000.0,
+    "category": "Money Out",
+    "category_detail": "Invoice"
+  },
+  {
+    "transaction_number": "13971b2f-7d74-4b0b-a1b5-2d331d669f33",
+    "transaction_date": "2025-03-22",
+    "amount": 100000000.0,
+    "category": "Savings",
+    "category_detail": "General Savings"
+  },
+  {
+    "transaction_number": "23e27546-7524-4099-9020-ecc0d4e79e9e",
+    "transaction_date": "2025-03-22",
+    "amount": 1000000.0,
+    "category": "Money In",
+    "category_detail": "Allowance"
+  },
+  {
+    "transaction_number": "46fca0e2-4643-461e-b786-2edb0304747a",
+    "transaction_date": "2025-03-22",
+    "amount": 10000.0,
+    "category": "Money Out",
+    "category_detail": "Moving"
+  },
+  {
+    "transaction_number": "0f9fdd71-ae3c-4429-a3c8-c77bfba12738",
+    "transaction_date": "2025-03-23",
+    "amount": 2133123.0,
+    "category": "Money In",
+    "category_detail": "Salary"
+  },
+  {
+    "transaction_number": "149c1904-932b-4501-99db-d35e12d96f35",
+    "transaction_date": "2025-03-23",
+    "amount": 1111.0,
+    "category": "Money In",
+    "category_detail": "Allowance"
+  },
+  {
+    "transaction_number": "1b55bda1-dbdc-40e5-953b-eb0b5139320d",
+    "transaction_date": "2025-03-23",
+    "amount": 100000000000.0,
+    "category": "Savings",
+    "category_detail": "General Savings"
+  },
+  {
+    "transaction_number": "d94f9803-8ea3-46b2-a40e-408967742611",
+    "transaction_date": "2025-03-23",
+    "amount": 23123.0,
+    "category": "Money Out",
+    "category_detail": "Shopping"
+  }
+]
